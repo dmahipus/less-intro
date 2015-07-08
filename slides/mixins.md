@@ -43,4 +43,3 @@
 </div>
 </div>
 
-<small>It is a good practice to limit nesting to maximum of 3 levels</small>
