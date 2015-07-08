@@ -1,0 +1,10 @@
+{
+  "generator-reveal": {
+    "presentationTitle": "Lean CSS with LESS",
+    "packageVersion": "0.0.1",
+    "useSass": true,
+    "deployToGithubPages": true,
+    "githubUsername": "dmahipus",
+    "githubRepository": "less-intro"
+  }
+}

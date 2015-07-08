@@ -1,0 +1,106 @@
+/**
+ * Sky theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+// Default mixins and settings -----------------
+@import "../../bower_components/reveal.js/css/theme/template/mixins";
+@import "../../bower_components/reveal.js/css/theme/template/settings";
+
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700,400italic,700italic);
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+
+// Background of the presentation
+
+// Override theme settings (see ../../bower_components/reveal.js/css/theme/template/settings.scss)
+$mainFont: "Open Sans", sans-serif;
+$mainFontSize: 36px;
+$mainColor: #333;
+$headingFont: "Quicksand", sans-serif;
+$headingColor: #333;
+$headingLetterSpacing: -0.08em;
+$headingTextShadow: 0;
+$headingTextTransform: none;
+$backgroundColor: white;
+$linkColor: #3b759e;
+$linkColorHover: lighten($linkColor, 20%);
+$selectionBackgroundColor: #134674;
+
+// Fix links so they are not cut off
+.reveal a:not(.image) {
+    line-height: 1.3em;
+}
+
+// Background generator
+@mixin bodyBackground {
+    // background-color: $backgroundColor
+}
+
+// Theme template ------------------------------
+@import "../../bower_components/reveal.js/css/theme/template/theme";
+
+// ---------------------------------------------
+
+.reveal pre{
+	box-shadow: none;
+    border: none;
+}
+
+p, code, pre {
+    font-size: 20px;
+    box-shadow: none;
+    border: none;
+}
+
+.clearing {
+    position: relative;
+    min-height: 1px;
+    float: left;
+
+    &:before {
+        display: table;
+        content: " ";
+    }
+
+    &:after {
+        clear: both;
+        display: table;
+        content: " ";
+    }
+}
+
+.company-logo {}
+
+.less {
+    font-weight: 700;
+    color: #1E416F;
+}
+
+.logo {
+    width: 380px;
+    border: none;
+
+    &.sm {
+        width: 200px;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+}
+
+.row {
+    width: 100%;
+    @extend .clearing;
+}
+
+.column {
+    &-half {
+        padding: 10px 5px;
+        width: 50%;
+        @extend .clearing;
+    }
+}
